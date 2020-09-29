@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="DEBUG">
+	<Properties>
+		<Property name="log-path">/WebLOGS/NMSTM_LOGS</Property>
+	</Properties>
+	<Appenders>
+	
+		<RollingFile name="RollingFile"
+			fileName="/home/btf_user/NMSTMLOG/nms.log"
+			filePattern="/home/btf_user/NMSTMLOG/nms-%d{yyyy-MM-dd_HH}-%i.log">
+			<PatternLayout>
+				<pattern>%d{dd/MMM/yyyy HH:mm:ss,SSS} %-6p(%F:%L) %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<SizeBasedTriggeringPolicy size="100 MB" modulate="true"/>
+				<!-- <TimeBasedTriggeringPolicy interval="1" modulate="true"/> -->
+			</Policies>
+		<!-- 	<DefaultRolloverStrategy max="500" /> -->
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Logger name="root" level="DEBUG">
+			<appender-ref ref="RollingFile" level="DEBUG" />
+		</Logger>
+		<Root level="DEBUG">
+			<AppenderRef ref="RollingFile" />
+		</Root>
+	</Loggers>
+</Configuration>
