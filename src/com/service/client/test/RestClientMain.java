@@ -20,7 +20,7 @@ public class RestClientMain
 
 		RequestErrorVO errorVo = new RequestErrorVO();
 
-		String createUser = "{\"olmId\":\"988876567\",\"storeId\":\"-90876\",\"userType\":\"AGENT\",\"msisdn\":\"9788876543\",\"lob\":\"LCO\",\"dslSfoCode\":\"-09876\",\"dslChannelId\":\"-09876\",\"circleId\":\"102\",\"name\":\"Ravi Kumar\"}";
+		String createUser = "{\"msisdn\":\"9999999999\",\"userName\":\"Alok\"}";
 
 		Map<String,String> map = createUser(bean, createUser);
 
