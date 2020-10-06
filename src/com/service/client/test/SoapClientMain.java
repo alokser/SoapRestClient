@@ -27,12 +27,8 @@ public class SoapClientMain {
 			//System.out.println("Request: "+request);
 			ServiceClient client = new ServiceClient();
 
-			//String url = "http://localhost:7001/service/st.swe?SSource=WebService&Cmd=Execute";
-			//String soapAction = "'document/http://service.com/test:Workflow'"; // This will be your action name
-			
-			
-			String url = "http://localhost:7777/eai_anon_enu/start.swe?SWEExtSource=AnonWebService&SweExtCmd=Execute";
-			String soapAction = "'document/http://siebel.com/CustomUI:BTFLY_spcCreate_spcSales_spcChannel_spcInbound_spcWorkflow'";
+			String url = "http://localhost:7001/service/st.swe?SSource=WebService&Cmd=Execute";
+			String soapAction = "'document/http://service.com/test:Workflow'"; // This will be your action name
 			
 			System.out.println("User Create URL: "+url);
 			
